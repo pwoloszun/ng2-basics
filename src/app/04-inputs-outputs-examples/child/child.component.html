@@ -1,0 +1,6 @@
+<h3>Child {{ firstName }}</h3>
+<button *ngFor="let n of childNumbers"
+        (click)="numberBtnClick(n)">{{n}}
+</button>
+
+<button (click)="nameBtnClick()">{{firstName}} data</button>

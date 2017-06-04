@@ -1,0 +1,13 @@
+<h3>Parent</h3>
+<div>
+  Parent Numbers: {{ parentNumbers.join(', ') }}
+</div>
+<h3>Children:</h3>
+<div>
+  <my-child
+    *ngFor="let name of childrenNames; let i = index"
+    [firstName]="name"
+    [childNumbers]="parentNumbers"
+    (numberClick)="chooseNumber(name, $event)"
+    (nameClick)="logTick($event)"></my-child>
+</div>

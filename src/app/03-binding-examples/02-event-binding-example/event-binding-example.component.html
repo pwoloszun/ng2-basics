@@ -1,0 +1,24 @@
+<h3>Event Binding Examples</h3>
+
+<div>
+  <h5>Event binding</h5>
+  <button (click)="logClick()">Start</button>
+  <p>On click message: {{clickMsg}}</p>
+</div>
+
+<hr/>
+<div>
+  <p>
+    <label>Name: {{name}}</label>
+  </p>
+  <input (keyup)="logName($event)"/>
+</div>
+
+<hr/>
+<div>
+  <p>
+    <label>Age: {{age}}</label>
+    <label>Age Field: {{myInputVar.value}}</label>
+  </p>
+  <input #myInputVar (keyup.enter)="setAge(myInputVar.value)" type="number"/>
+</div>

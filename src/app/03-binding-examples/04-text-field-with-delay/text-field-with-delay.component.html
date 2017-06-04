@@ -1,0 +1,5 @@
+<div>
+  <h3>Adv NgModel</h3>
+  <p>First Name: {{ myValue }}</p>
+  <input [ngModel]="myValue" (ngModelChange)="updateMyValue($event)" type="text"/>
+</div>

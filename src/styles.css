@@ -1,0 +1,37 @@
+.small-img {
+  width: 320px;
+}
+
+.todo-list {
+  position: relative;
+  display: block;
+}
+
+.todo-list .todo-item {
+  position: relative;
+  border-top: 1px solid #999;
+  padding: 6px 0;
+  margin: 0 auto 12px;
+}
+
+.todo-list .todo-item .desc {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.todo-list .todo-item.finished {
+  color: #777;
+}
+
+.todo-list .todo-item.finished .title {
+  text-decoration: line-through;
+}
+
+.todo-list .todo-item .todo-edit {
+  position: absolute;
+  background-color: #ccc;
+  right: 6px;
+  top: 6px;
+  border: 1px solid #000;
+  padding: 6px;
+}

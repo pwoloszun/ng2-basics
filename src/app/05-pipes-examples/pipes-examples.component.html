@@ -1,0 +1,22 @@
+<h3>Pipes examples</h3>
+
+<div>
+  <h6>JSON pipe</h6>
+  <pre>
+    {{jsonData | json}}
+  </pre>
+</div>
+
+<div>
+  <h6>Reverse</h6>
+  <input [(ngModel)]="message">
+  <p>Original: {{message}}</p>
+  <p>Reversed: {{message | reverse}}</p>
+</div>
+
+<!--<div>-->
+  <!--<h6>Multiply</h6>-->
+  <!--<input [(ngModel)]="m1" type="number">-->
+  <!--<input [(ngModel)]="m2" type="number">-->
+  <!--<p>Result: {{m1 | multiply:m2}}</p>-->
+<!--</div>-->
