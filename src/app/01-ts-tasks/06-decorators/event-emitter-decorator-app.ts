@@ -1,13 +1,13 @@
 import { MyEventEmitter, trigger } from './02-my-event-emitter';
 
-@MyEventEmitter({
-  on: {
-    'name:change': function (oldValue: string, currentValue: string) {
-      console.log('current context', this);
-      console.log('values', oldValue, currentValue);
-    }
-  }
-})
+// @MyEventEmitter({
+//   on: {
+//     'name:change': function (oldValue: string, currentValue: string) {
+//       console.log('current context', this);
+//       console.log('values', oldValue, currentValue);
+//     }
+//   }
+// })
 class Person {
   constructor(public name: string) {
   }
@@ -16,7 +16,7 @@ class Person {
     return this.name;
   }
 
-  @trigger('name:change')
+  // @trigger('name:change')
   setName(value: string) {
     this.name = value;
   }

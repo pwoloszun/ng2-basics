@@ -17,8 +17,7 @@ function testSetPersonalData() {
  * Usage:
  * callInContext(myFunction, myObject, 1, "xxx", [])
  * */
-function callInContext(fn: Function, contextObj: any, ...args: any[]) {
-  return fn.apply(contextObj, args);
+function callInContext() {
 }
 
 function testCallInContext() {
@@ -33,11 +32,11 @@ function testCallInContext() {
     name: "Bob"
   };
 
-  let result = callInContext(myFunction, bob, "www", 997, [], null);
+  let result = null; //callInContext(myFunction, bob, "www", 997, [], null); // TODO
   console.log("myFunction result == ", result);
 }
 
 export function functionsContextApp() {
   testSetPersonalData();
-  testCallInContext();
+  // testCallInContext(); // TODO
 }

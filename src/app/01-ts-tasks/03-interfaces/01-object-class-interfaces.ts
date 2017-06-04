@@ -1,52 +1,20 @@
-interface Shape {
-  color: string;
-}
-
-interface Square extends Shape {
-  sideLength: number;
-}
-
-let square = <Square>{};
-square.color = "blue";
-square.sideLength = 10;
-
-
 interface Person {
   age: number;
-
   setAge(age: number);
-
   getName(): string;
 }
 
+// Patient class impl
+export class Patient {}
 
-export class Patient implements Person {
-  age: number;
-
-  constructor(private name) {
-  }
-
-  setAge(age: number) {
-  }
-
-  getName(): string {
-    return this.name;
-  }
-}
-
+// Object instance impl
 function testPersonInterface() {
-  let ed: Person = new Patient('ed');
+  // let ed: Person = new Patient("ed");
 
-  let bob: Person = {
-    age: 12,
-    setAge(a: number) {
-    },
-    getName(): string {
-      return '';
-    }
-  };
-
+  // let bob: Person;
 }
+
+
 
 
 class Power {
@@ -62,12 +30,6 @@ enum Universe {Marvel, DC, Vertigo, Mucha}
 // + String secretIdentity
 // + Power array powers
 // + Universe universe
-interface SuperHero {
-  name: string;
-  secretIdentity: string;
-  powers: Power[];
-  universe: Universe;
-}
 
 // TODO 1: create object instance implementing SuperHero interface (name: Spider Man)
 // TODO 2: create class DCSuperHero implementing SuperHero interface
@@ -80,13 +42,6 @@ interface SuperHero {
 // methods:
 // + string evilLaugh()
 // + void setMasterPlan(String plan)
-interface SuperVillain {
-  name: string;
-
-  evilLaugh(): string;
-
-  setMasterPlan(plan: string): void;
-}
 
 // TODO 4: create object instance implementing SuperVillain interface (name: Two-Face)
 // TODO 5: create class BatmanEnemy implementing SuperVillain interface

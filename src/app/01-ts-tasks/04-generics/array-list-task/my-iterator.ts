@@ -1,4 +1,5 @@
-export interface MyIterator<T> {
-  hasNext(): boolean;
-  next(): T;
-}
+//TODO: MyIterator interface
+// + hasNext()
+// + next()
+
+export const MyIterator = null;

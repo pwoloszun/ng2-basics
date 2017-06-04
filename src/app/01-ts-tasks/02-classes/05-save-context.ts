@@ -16,26 +16,12 @@ class MyPerson {
   }
 
   setNameClosure(name: string) {
-    let that = this;
-    const fn = function () {
-      that.name = name;
-    };
-    setTimeout(fn, this.delay);
   }
 
   setNameBind(name: string) {
-    const fn = function () {
-      this.name = name;
-    };
-    const bindedFn = fn.bind(this);
-    setTimeout(bindedFn, this.delay);
   }
 
   setNameFatArrowFunction(name: string) {
-    const fn = () => {
-      this.name = name;
-    };
-    setTimeout(fn, this.delay);
   }
 }
 
@@ -57,4 +43,3 @@ export function saveContextApp() {
     console.log("bob4.name", bob4.name);
   }, 2000)
 }
-

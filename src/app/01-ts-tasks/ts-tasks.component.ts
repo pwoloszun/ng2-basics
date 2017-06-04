@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { decoratorExampleApp } from './06-decorators/01-decorator-example';
-import { eventEmitterDecoratorApp } from './06-decorators/event-emitter-decorator-app';
+// TODO: import ts functions
 
 @Component({
   selector: 'ts-tasks',
@@ -10,10 +9,9 @@ import { eventEmitterDecoratorApp } from './06-decorators/event-emitter-decorato
 export class TSTasksComponent implements OnInit {
   ngOnInit(): void {
     // on init code
-    eventEmitterDecoratorApp();
   }
 
   runApp() {
-    decoratorExampleApp();
+    // on btn click
   }
 }

@@ -1,6 +1,4 @@
-import {MyIterator} from "./my-iterator";
-
-export interface MyList<T> {
-  add(item: T): void;
-  iterator(): MyIterator<T>;
-}
+//TODO: MyList interface
+// + add(item)
+// + iterator()
+export const MyList = null;

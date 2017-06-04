@@ -1,11 +1,6 @@
 // TODO: map
-function map(list: any[], mapper: Function): any[] {
-  let mappedList: any[] = [];
-  for (let i: number = 0; i < list.length; i++) {
-    let el: any = list[i];
-    mappedList.push(mapper(el, i));
-  }
-  return mappedList;
+function map(list, mapper) {
+  return [];
 }
 
 function testMap() {
@@ -18,15 +13,8 @@ function testMap() {
 }
 
 // TODO: filter
-function filter(list: any[], filteringAlgorithm: Function): any[] {
-  let filteredList: any[] = [];
-  for (let i: number = 0; i < list.length; i++) {
-    let el: any = list[i];
-    if (filteringAlgorithm(el, i)) {
-      filteredList.push(el);
-    }
-  }
-  return filteredList;
+function filter(list, filteringAlgorithm) {
+  return [];
 }
 
 function testFilter() {
@@ -39,15 +27,8 @@ function testFilter() {
 }
 
 // TODO: reduce
-function reduce(list: any[], iterator: Function): any {
-  if (list.length === 0) {
-    return null;
-  }
-  let result: any = list[0];
-  for (let i: number = 1; i < list.length; i++) {
-    result = iterator(result, list[i], i, list);
-  }
-  return result;
+function reduce(list, iterator) {
+  return null;
 }
 
 function testReduce() {
@@ -65,11 +46,8 @@ function testReduce() {
 }
 
 // TODO: merge
-function merge(destination: Object, source: Object): Object {
-  for (let propertyName in source) {
-    destination[propertyName] = source[propertyName];
-  }
-  return destination;
+function merge(destination, source) {
+  return null;
 }
 
 function testMerge() {
@@ -78,15 +56,8 @@ function testMerge() {
 }
 
 // TODO: all
-function all(list: any[], test: Function): boolean {
-  let item: any;
-  for (let i: number = 0; i < list.length; i++) {
-    item = list[i];
-    if (!test(item, i)) {
-      return false;
-    }
-  }
-  return true;
+function all(list, test) {
+  return null;
 }
 
 function testAll() {
@@ -104,14 +75,8 @@ function testAll() {
 }
 
 // TODO: pluck
-function pluck(list: Object[], propertyName: string): any[] {
-  let results: any[] = [];
-  let item: Object;
-  for (let i: number = 0; i < list.length; i++) {
-    item = list[i];
-    results.push(item[propertyName]);
-  }
-  return results;
+function pluck(list, propertyName) {
+  return [];
 }
 
 function testPluck() {
@@ -128,20 +93,8 @@ function testPluck() {
 }
 
 // TODO: groupBy
-function groupBy(list: any[], iterator: Function): Object {
-  let grouped: Object = {};
-  let item, value: any;
-
-  for (let i: number = 0; i < list.length; i++) {
-    item = list[i];
-    value = iterator(item);
-    if (!grouped[value]) {
-      grouped[value] = [];
-    }
-    grouped[value].push(item);
-  }
-
-  return grouped;
+function groupBy(list, iterator) {
+  return null;
 }
 
 function testGroupBy() {
