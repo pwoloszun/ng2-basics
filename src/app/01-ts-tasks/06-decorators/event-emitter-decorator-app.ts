@@ -23,8 +23,8 @@ class Person {
     this.name = value;
   }
 
-  // @trigger('do:smth')
-  ggg(f) {
+  // @trigger('xxx')
+  ggg(f: number) {
     console.log('ggg');
   }
 }
