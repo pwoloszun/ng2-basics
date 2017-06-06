@@ -2,9 +2,11 @@ import { MyEventEmitter, trigger } from './02-my-event-emitter';
 
 // @MyEventEmitter({
 //   on: {
-//     'name:change': function (oldValue: string, currentValue: string) {
-//       console.log('current context', this);
-//       console.log('values', oldValue, currentValue);
+//     'name:change': function (...args: any[]) {
+//       console.log('name:change', this, args);
+//     },
+//     'xxx': function (...args: any[]) {
+//       console.log('xxx', this, args);
 //     }
 //   }
 // })
@@ -20,10 +22,19 @@ class Person {
   setName(value: string) {
     this.name = value;
   }
+
+  // @trigger('do:smth')
+  ggg(f) {
+    console.log('ggg');
+  }
 }
 
 export function eventEmitterDecoratorApp() {
   let bob: Person = new Person('bob');
+  let ed: Person = new Person('ed');
+
+  bob.ggg(123);
+  ed.ggg(997);
 
   console.log('Decorated Bob:', bob);
   bob.setName('Ed II');
